@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.9)
+project(lt_test)
+#include_directories(${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/src)
+include_directories(SYSTEM ${PROJECT_SOURCE_DIR}/libtorrent/include)
+add_executable(lt_test main.cpp)
+target_link_libraries(lt_test ${CMAKE_SOURCE_DIR}/libtorrent/_build/libtorrent-rasterbar.so Threads::Threads)
